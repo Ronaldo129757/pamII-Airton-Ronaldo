@@ -79,37 +79,37 @@ const MovieScreen = () => {
         contentContainerStyle={viewStyles.categoryContainer}
       >
         <TouchableOpacity>
-          <Link href="/app/index">
+          <Link href="/tabs/acao">
             <Text style={[textStyles.categoryText, textStyles.activeCategory]}>AÇÃO</Text>
           </Link>
         </TouchableOpacity>
         <TouchableOpacity>
           <Link href="/tabs/infantil">
-            <Text style={textStyles.categoryText}>INFANTIL</Text>
+            <Text style={[textStyles.categoryText, textStyles.activeCategory]}>INFANTIL</Text>
           </Link>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/anime">ANIME</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/terror">TERROR</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/comedia">COMEDIA</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/drama">DRAMA</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/romance">ROMANCE</Link>
           </Text>
         </TouchableOpacity>

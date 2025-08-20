@@ -24,26 +24,26 @@ const MovieScreen = () => {
   // Dados de exemplo para os filmes. Em uma aplicação real, estes dados viriam de uma API.
   // As URLs das imagens foram substituídas por placeholders para garantir a compilação no ambiente.
   const movies = [
-    { id: '1', title: 'Chefes de Estado', image: 'https://br.web.img3.acsta.net/img/0f/12/0f125b89a016dc07513b81f65ac3065e.jpg' },
-    { id: '2', title: 'Superman', image: 'https://br.web.img3.acsta.net/img/86/64/8664d1b110b95eb32313683f1a655f5f.jpg' },
-    { id: '3', title: 'Vingadores: Ultimato', image: 'https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg' },
-    { id: '4', title: 'Velozes e Furiosos 10', image: 'https://m.media-amazon.com/images/S/pv-target-images/848a155842f8331062bd190b1584e3b152af0271468312ce6b0def838721592b.jpg' },
-    { id: '5', title: 'Esquadrão Suicida', image: 'https://br.web.img2.acsta.net/c_310_420/pictures/21/06/22/22/19/1495362.jpg' },
-    { id: '6', title: 'Gladiador 2', image: 'https://images.justwatch.com/poster/322099104/s718/gladiator-2.jpg' },
-    { id: '7', title: 'Bad Boys: Hasta la Muerte', image: 'https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg' },
-    { id: '8', title: 'John Wick: Baba Yaga', image: 'https://www.ucicinemas.com.br/Content/Upload/Filmes/Posters/9937/filme_9937.jpg' },
-    { id: '9', title: 'Liga da Justiça', image: 'https://play-lh.googleusercontent.com/e9cKG_aLFwCNBKZQqFF9kvqf5OG3vhkeSFdVU4zItFdqUIsirjreZdFG37Jljl1Agqhj=w240-h480-rw' },
-    { id: '10', title: 'Adão Negro', image: 'https://cinema10.com.br/upload/featuredImage.php?url=https%3A%2F%2Fcinema10.com.br%2Fupload%2Ffilmes%2Ffilmes_12272_13737-medio.jpg' },
-    { id: '11', title: 'Batman', image: 'https://br.web.img3.acsta.net/pictures/22/03/02/19/26/3666027.jpg' },
-    { id: '12', title: 'Mulher-Maravilha', image: 'https://images.justwatch.com/poster/9338913/s718/mulher-maravilha-2017.jpg' },
-    { id: '13', title: 'Homem de Ferro 3', image: 'https://upload.wikimedia.org/wikipedia/pt/1/19/Iron_Man_3_poster.jpg' },
-    { id: '14', title: 'Capitão America: O soldado invernal', image: 'https://upload.wikimedia.org/wikipedia/pt/e/e8/Captain_America_The_Winter_Soldier.jpg' },
-    { id: '15', title: 'Rango', image: 'https://m.media-amazon.com/images/M/MV5BMTc4NjEyODE1OV5BMl5BanBnXkFtZTcwMjYzNTkxNA@@._V1_.jpg' },
-    { id: '16', title: 'Wall-e', image: 'https://play-lh.googleusercontent.com/s90tRLDG8npS1xHbN3Hu7c7yBdLyv05CuLOwIjAR1Lsk8fj-jCiPiMkdbHamxLPQDTBQ' },
-    { id: '17', title: 'Jurassic World', image: 'https://upload.wikimedia.org/wikipedia/en/a/a5/Jurassic_World_Rebirth_poster.jpg' },
-    { id: '18', title: '9-A Salvação', image: 'https://m.media-amazon.com/images/S/pv-target-images/8891f293384aa684661951363c1f2db17c9f84048fb1606f8d5063af9df16a09.jpg' },
-    { id: '19', title: 'Karate Kid', image: 'https://m.media-amazon.com/images/S/pv-target-images/2600a1b1a374a2a0026bd9ad99ce6cc6070fdd4e78c7cd4614d30633d7e3fb39.jpg' },
-    { id: '20', title: 'Ratatouille', image: 'https://www.papodecinema.com.br/wp-content/uploads/2012/08/20181221-medium-ratatouille-poster-size-12-inch-x-18-inch-pack-of-1-original-imafy8d2aqshpguj.webp' },
+    { id: '21', title: 'Pokêmon: O Filme', image: 'https://play-lh.googleusercontent.com/BEgD7H9DDBp581nxdJ1zCcTmObenUvo3cd7tLGkpx9_NT412i5NS-X_n-8AmpcA9biX2' },
+    { id: '22', title: 'O Espanta Tubarões', image: 'https://upload.wikimedia.org/wikipedia/pt/3/30/Shark_Tale.jpg' },
+    { id: '23', title: 'Por Água Abaixo', image: 'https://upload.wikimedia.org/wikipedia/pt/a/a0/PorAguaAbaixo.jpg' },
+    { id: '24', title: 'Bee Movie', image: 'https://upload.wikimedia.org/wikipedia/pt/f/f9/Bee_movie.jpg' },
+    { id: '25', title: 'Bob Esponja: O filme', image: 'https://upload.wikimedia.org/wikipedia/pt/2/2f/6875.jpg' },
+    { id: '26', title: 'Monstros S.A', image: 'https://upload.wikimedia.org/wikipedia/pt/7/75/Monsters_Inc.jpg' },
+    { id: '27', title: 'Carros', image: 'https://upload.wikimedia.org/wikipedia/pt/9/9b/Carros_p%C3%B4ster.jpg' },
+    { id: '28', title: 'Garfield: Fora de Casa', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0F5H6gdg59kKwY0XkPNu3Ipd4-HqjSj77kw&s' },
+    { id: '29', title: 'Meu Malvado Favorito 2', image: 'https://upload.wikimedia.org/wikipedia/pt/2/26/Despicable_Me_2.jpg' },
+    { id: '30', title: 'Os Caras Malvados 2', image: 'https://media.fstatic.com/W13oYy-wo1gRCnpyteylTorO91o=/210x312/smart/filters:format(webp)/media/movies/covers/2025/07/1000029396.jpg' },
+    { id: '31', title: 'Gato de Botas 2', image: 'https://www.atoupeira.com.br/wp-content/uploads/2023/01/gato-de-botas-2-poster-nacional-critica.jpg' },
+    { id: '32', title: 'Up: Altas Aventuras', image: 'https://upload.wikimedia.org/wikipedia/pt/a/a8/Up_p%C3%B4ster.jpg' },
+    { id: '33', title: 'Procurando Nemo', image: 'https://upload.wikimedia.org/wikipedia/pt/2/29/Finding_Nemo.jpg' },
+    { id: '34', title: 'Viva: A vida é uma Festa', image: 'https://upload.wikimedia.org/wikipedia/pt/a/ae/Cocofilme.png' },
+    { id: '35', title: 'Rango', image: 'https://m.media-amazon.com/images/M/MV5BMTc4NjEyODE1OV5BMl5BanBnXkFtZTcwMjYzNTkxNA@@._V1_.jpg' },
+    { id: '36', title: 'Wall-e', image: 'https://play-lh.googleusercontent.com/s90tRLDG8npS1xHbN3Hu7c7yBdLyv05CuLOwIjAR1Lsk8fj-jCiPiMkdbHamxLPQDTBQ' },
+    { id: '37', title: 'Os Incriveis', image: 'https://upload.wikimedia.org/wikipedia/pt/4/4b/Os_Incr%C3%ADveis.jpg' },
+    { id: '38', title: 'Angry Birds: O filme', image: 'https://upload.wikimedia.org/wikipedia/pt/e/e5/Angry_birds_poster.jpg' },
+    { id: '39', title: 'Meu Malvado Favorito 4', image: 'https://br.web.img3.acsta.net/img/6c/71/6c71afa89fd8ed8999b3e04d8d794a0e.jpg' },
+    { id: '40', title: 'Ratatouille', image: 'https://www.papodecinema.com.br/wp-content/uploads/2012/08/20181221-medium-ratatouille-poster-size-12-inch-x-18-inch-pack-of-1-original-imafy8d2aqshpguj.webp' },
   ];
 
   // Função para agrupar os filmes em linhas de 4 para o grid
@@ -79,37 +79,37 @@ const MovieScreen = () => {
         contentContainerStyle={viewStyles.categoryContainer}
       >
         <TouchableOpacity>
-          <Link href="/app/index">
-            <Text style={[textStyles.categoryText, textStyles.activeCategory]}>AÇÃO</Text>
-          </Link>
+            <Link href="/tabs/acao">
+                <Text style={[textStyles.categoryText, textStyles.activeCategory]}>AÇÃO</Text>
+            </Link>
         </TouchableOpacity>
         <TouchableOpacity>
           <Link href="/tabs/infantil">
-            <Text style={textStyles.categoryText}>INFANTIL</Text>
+            <Text style={[textStyles.categoryText, textStyles.activeCategory]}>INFANTIL</Text>
           </Link>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/anime">ANIME</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/terror">TERROR</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/comedia">COMEDIA</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/drama">DRAMA</Link>
           </Text>
         </TouchableOpacity>
         <TouchableOpacity>
-          <Text style={textStyles.categoryText}>
+          <Text style={[textStyles.categoryText, textStyles.activeCategory]}>
             <Link href="/tabs/romance">ROMANCE</Link>
           </Text>
         </TouchableOpacity>
