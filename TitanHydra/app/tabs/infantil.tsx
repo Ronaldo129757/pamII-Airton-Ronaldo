@@ -1,14 +1,15 @@
 import { Link } from 'expo-router';
 import React from 'react';
 import {
-  StyleSheet,
-  View,
-  Text,
+  Dimensions // Para obter a largura da tela e calcular tamanhos responsivos
+  ,
   Image,
   ScrollView,
-  TouchableOpacity,
   StatusBar,
-  Dimensions // Para obter a largura da tela e calcular tamanhos responsivos
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
 
 // Obtém a largura da tela para cálculos responsivos
@@ -33,7 +34,7 @@ const MovieScreen = () => {
     { id: '27', title: 'Carros', image: 'https://upload.wikimedia.org/wikipedia/pt/9/9b/Carros_p%C3%B4ster.jpg' },
     { id: '28', title: 'Garfield: Fora de Casa', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0F5H6gdg59kKwY0XkPNu3Ipd4-HqjSj77kw&s' },
     { id: '29', title: 'Meu Malvado Favorito 2', image: 'https://upload.wikimedia.org/wikipedia/pt/2/26/Despicable_Me_2.jpg' },
-    { id: '30', title: 'Os Caras Malvados 2', image: 'https://media.fstatic.com/W13oYy-wo1gRCnpyteylTorO91o=/210x312/smart/filters:format(webp)/media/movies/covers/2025/07/1000029396.jpg' },
+    { id: '30', title: 'Os Caras Malvados 2', image: 'https://tse2.mm.bing.net/th/id/OIF.kUc6I94HAXdWY07RvxQPfQ?rs=1&pid=ImgDetMain&o=7&rm=3' },
     { id: '31', title: 'Gato de Botas 2', image: 'https://www.atoupeira.com.br/wp-content/uploads/2023/01/gato-de-botas-2-poster-nacional-critica.jpg' },
     { id: '32', title: 'Up: Altas Aventuras', image: 'https://upload.wikimedia.org/wikipedia/pt/a/a8/Up_p%C3%B4ster.jpg' },
     { id: '33', title: 'Procurando Nemo', image: 'https://upload.wikimedia.org/wikipedia/pt/2/29/Finding_Nemo.jpg' },
