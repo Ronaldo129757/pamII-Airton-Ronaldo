@@ -1,14 +1,15 @@
 import { Link } from 'expo-router';
 import React from 'react';
 import {
-  StyleSheet,
-  View,
-  Text,
+  Dimensions // Para obter a largura da tela e calcular tamanhos responsivos
+  ,
   Image,
   ScrollView,
-  TouchableOpacity,
   StatusBar,
-  Dimensions // Para obter a largura da tela e calcular tamanhos responsivos
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
 
 // Obtém a largura da tela para cálculos responsivos
@@ -33,7 +34,7 @@ const MovieScreen = () => {
     { id: '7', title: 'Bad Boys: Hasta la Muerte', image: 'https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_.jpg' },
     { id: '8', title: 'John Wick: Baba Yaga', image: 'https://www.ucicinemas.com.br/Content/Upload/Filmes/Posters/9937/filme_9937.jpg' },
     { id: '9', title: 'Liga da Justiça', image: 'https://play-lh.googleusercontent.com/e9cKG_aLFwCNBKZQqFF9kvqf5OG3vhkeSFdVU4zItFdqUIsirjreZdFG37Jljl1Agqhj=w240-h480-rw' },
-    { id: '10', title: 'Adão Negro', image: 'https://cinema10.com.br/upload/featuredImage.php?url=https%3A%2F%2Fcinema10.com.br%2Fupload%2Ffilmes%2Ffilmes_12272_13737-medio.jpg' },
+    { id: '10', title: 'Adão Negro', image: 'https://tse3.mm.bing.net/th/id/OIP.fHu2PFsdYvTmnlyclyck1gHaK_?rs=1&pid=ImgDetMain&o=7&rm=3' },
     { id: '11', title: 'Batman', image: 'https://br.web.img3.acsta.net/pictures/22/03/02/19/26/3666027.jpg' },
     { id: '12', title: 'Mulher-Maravilha', image: 'https://images.justwatch.com/poster/9338913/s718/mulher-maravilha-2017.jpg' },
     { id: '13', title: 'Homem de Ferro 3', image: 'https://upload.wikimedia.org/wikipedia/pt/1/19/Iron_Man_3_poster.jpg' },
