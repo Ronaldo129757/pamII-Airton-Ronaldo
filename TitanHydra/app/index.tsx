@@ -62,6 +62,7 @@ const MovieScreen = () => {
       <View style={viewStyles.header}>
         {/* Ícone de menu */}
         <TouchableOpacity style={viewStyles.iconButton}>
+          <Link href='/tabs/configuracoes'>
           <Text style={textStyles.headerIcon}>☰</Text>
         </TouchableOpacity>
         {/* Título da tela */}
