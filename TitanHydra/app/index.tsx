@@ -64,6 +64,7 @@ const MovieScreen = () => {
         <TouchableOpacity style={viewStyles.iconButton}>
           <Link href='/tabs/configuracoes'>
           <Text style={textStyles.headerIcon}>☰</Text>
+          </Link>
         </TouchableOpacity>
         {/* Título da tela */}
         <Text style={textStyles.headerTitle}>Filmes</Text>
@@ -80,7 +81,7 @@ const MovieScreen = () => {
         contentContainerStyle={viewStyles.categoryContainer}
       >
         <TouchableOpacity>
-          <Link href="/app/index">
+          <Link href="/tabs/acao">
             <Text style={[textStyles.categoryText, textStyles.activeCategory]}>AÇÃO</Text>
           </Link>
         </TouchableOpacity>
@@ -232,3 +233,4 @@ const imageStyles = StyleSheet.create({
 });
 
 export default MovieScreen;
+
