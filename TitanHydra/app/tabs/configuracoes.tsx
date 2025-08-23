@@ -35,28 +35,23 @@ const SettingsScreen = () => {
           <TouchableOpacity style={[settingsStyles.menuItem, settingsStyles.menuItemActive]}>
             {/* Ícone verde de filme */}
             <View style={settingsStyles.iconFilmeBackground}>
-                <Text style={settingsStyles.menuItemIconFilme}>🎬</Text>
+                <Text style={settingsStyles.menuItemIconFilme}></Text>
             </View>
             <Text style={[settingsStyles.menuItemText, settingsStyles.menuItemTextActive]}>Filmes</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>📺</Text>
+            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Series</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>📖</Text>
-            <Text style={settingsStyles.menuItemText}>Novelas</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>❤️</Text>
+            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Favoritos</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>⬇️</Text>
+            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Downloads</Text>
           </TouchableOpacity>
 
@@ -65,26 +60,26 @@ const SettingsScreen = () => {
           <Text style={settingsStyles.sectionTitle}>Apps</Text>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>📱</Text> {/* Ícone para Apps */}
+            <Text style={settingsStyles.menuItemIcon}></Text> {/* Ícone para Apps */}
             <Text style={settingsStyles.menuItemText}>Hydra Kids</Text>
           </TouchableOpacity>
 
           {/* Separador e Título da Seção Suporte */}
           <View style={settingsStyles.sectionDivider} />
-          <Text style={settingsStyles.sectionTitle}>Soporte</Text>
+          <Text style={settingsStyles.sectionTitle}>Suporte</Text>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>✈️</Text>
-            <Text style={settingsStyles.menuItemText}>Síguenos en Telegram</Text>
+            <Text style={settingsStyles.menuItemIcon}></Text>
+            <Text style={settingsStyles.menuItemText}>Sigam a gente no Telegram</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>🔵</Text> {/* Simula o ícone do Facebook */}
-            <Text style={settingsStyles.menuItemText}>Síguenos en Facebook</Text>
+            <Text style={settingsStyles.menuItemIcon}></Text>
+            <Text style={settingsStyles.menuItemText}>Sigam a gente no Facebook</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}>🚪</Text>
+            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Fechar Sessão</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -173,7 +168,7 @@ const settingsStyles = StyleSheet.create({
     fontWeight: '500',
   },
   menuItemTextActive: {
-    fontWeight: '700', // Texto ativo mais negrito
+    fontWeight: '700', 
   },
   sectionDivider: {
     height: 1,
@@ -190,4 +185,4 @@ const settingsStyles = StyleSheet.create({
   },
 });
 
-export default SettingsScreen; // Exporta o componente SettingsScreen
+export default SettingsScreen;
