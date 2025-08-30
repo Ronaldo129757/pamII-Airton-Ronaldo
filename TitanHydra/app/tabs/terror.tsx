@@ -1,4 +1,15 @@
 import { Link } from 'expo-router';
+import { Icon } from '@/components/ui/icon';
+import { SearchIcon } from '@/components/ui/icon';
+import { useFonts } from 'expo-font';
+
+import {
+  Inter_400Regular,
+  Inter_500Medium,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_900Black,
+} from "@expo-google-fonts/inter";
 import React from 'react';
 import {
   Dimensions // Para obter a largura da tela e calcular tamanhos responsivos
@@ -22,6 +33,18 @@ const posterWidth = (width - screenPadding - (numColumns - 1) * itemSpacing) / n
 
 
 const MovieScreen = () => {
+  const [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Inter_900Black,
+  });
+
+  if (!fontsLoaded) {
+    // Exibe um indicador de carregamento enquanto as fontes não estão prontas
+    return <Text>Carregando fontes...</Text>;
+  }
   // Dados de exemplo para os filmes. Em uma aplicação real, estes dados viriam de uma API.
   // As URLs das imagens foram substituídas por placeholders para garantir a compilação no ambiente.
   const movies = [
@@ -71,14 +94,14 @@ const MovieScreen = () => {
         <Text style={textStyles.headerTitle}>Filmes</Text>
         {/* Ícone de pesquisa */}
         <TouchableOpacity style={viewStyles.iconButton}>
-          <Text style={textStyles.headerIcon}>🔍</Text>
+          <Icon as={SearchIcon} className="text-typography-500 m-2 w-4 h-4" />
         </TouchableOpacity>
       </View>
 
       {/* Abas de categorias - ScrollView horizontal para permitir rolagem das categorias */}
       <ScrollView
         horizontal
-        showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={true}
         contentContainerStyle={viewStyles.categoryContainer}
       >
         <TouchableOpacity>
@@ -186,6 +209,7 @@ const viewStyles = StyleSheet.create({
   },
   iconButton: {
     padding: 5,
+    color: '#fff',
   },
 });
 

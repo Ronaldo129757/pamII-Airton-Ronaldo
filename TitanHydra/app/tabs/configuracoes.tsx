@@ -1,4 +1,13 @@
 import React from 'react';
+import { useFonts } from 'expo-font';
+import { Icon } from '@/components/ui/icon';
+
+import {
+  Inter_400Regular,
+  Inter_500Medium,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_900Black, } from "@expo-google-fonts/inter";
 import {
   StyleSheet,
   View,
@@ -12,14 +21,27 @@ import {
 
 // --- Componente da Tela de Configurações (SettingsScreen) ---
 // Este componente é autônomo e pode ser usado como uma tela em um navegador de abas.
+
 const SettingsScreen = () => {
+  const [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Inter_900Black,
+  });
+
+  if (!fontsLoaded) {
+    // Exibe um indicador de carregamento enquanto as fontes não estão prontas
+    return <Text>Carregando fontes...</Text>;
+  }
+
   return (
     <SafeAreaView style={settingsStyles.fullContainer}>
       <StatusBar barStyle="light-content" backgroundColor="#202020" /> {/* Define o estilo da barra de status */}
       <View style={settingsStyles.container}>
         {/* Cabeçalho do Perfil */}
         <View style={settingsStyles.profileHeader}>
-          {/* Usando uma imagem de placeholder, substitua pela sua imagem do logo Titan Hydra */}
           <Image
             source={{ uri: 'https://play-lh.googleusercontent.com/k2BaLq9MgfgJCSGSTi5HY26FcdiCwlkO5F9X6oZgBPrguMvnWjrWgsER_O8tlsLegZ0' }}
             style={settingsStyles.profileLogo}
@@ -32,54 +54,36 @@ const SettingsScreen = () => {
 
         {/* Seção de Menu Principal */}
         <ScrollView style={settingsStyles.menuItemsContainer}>
-          <TouchableOpacity style={[settingsStyles.menuItem, settingsStyles.menuItemActive]}>
-            {/* Ícone verde de filme */}
-            <View style={settingsStyles.iconFilmeBackground}>
-                <Text style={settingsStyles.menuItemIconFilme}></Text>
-            </View>
+          <TouchableOpacity style={settingsStyles.menuItem}>
             <Text style={[settingsStyles.menuItemText, settingsStyles.menuItemTextActive]}>Filmes</Text>
           </TouchableOpacity>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Series</Text>
           </TouchableOpacity>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Favoritos</Text>
           </TouchableOpacity>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Downloads</Text>
           </TouchableOpacity>
 
           {/* Separador e Título da Seção Apps */}
           <View style={settingsStyles.sectionDivider} />
           <Text style={settingsStyles.sectionTitle}>Apps</Text>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text> {/* Ícone para Apps */}
             <Text style={settingsStyles.menuItemText}>Hydra Kids</Text>
           </TouchableOpacity>
 
           {/* Separador e Título da Seção Suporte */}
           <View style={settingsStyles.sectionDivider} />
           <Text style={settingsStyles.sectionTitle}>Suporte</Text>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Sigam a gente no Telegram</Text>
           </TouchableOpacity>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Sigam a gente no Facebook</Text>
           </TouchableOpacity>
-
           <TouchableOpacity style={settingsStyles.menuItem}>
-            <Text style={settingsStyles.menuItemIcon}></Text>
             <Text style={settingsStyles.menuItemText}>Fechar Sessão</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -87,7 +91,6 @@ const SettingsScreen = () => {
     </SafeAreaView>
   );
 };
-
 // --- Estilos para SettingsScreen ---
 const settingsStyles = StyleSheet.create({
   fullContainer: { // Para garantir que a SafeAreaView ocupe toda a tela
@@ -96,22 +99,22 @@ const settingsStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#202020', // Cor de fundo mais escura para o menu lateral
+    backgroundColor: '#000', // Cor de fundo mais escura para o menu lateral
   },
   profileHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#202020', // Mesmo fundo
+    backgroundColor: '#000', // Mesmo fundo
     borderBottomWidth: 1,
     borderBottomColor: '#303030', // Linha sutil abaixo do cabeçalho
   },
   profileLogo: {
     width: 60,
     height: 60,
-    borderRadius: 30, // Arredondado para simular o logo
+    borderRadius: 10, // Arredondado para simular o logo
     marginRight: 15,
-    backgroundColor: '#1E88E5', // Cor de fundo do placeholder
+    backgroundColor: '#000', // Cor de fundo do placeholder
   },
   profileTextContainer: {
     flex: 1,
@@ -136,27 +139,12 @@ const settingsStyles = StyleSheet.create({
     paddingHorizontal: 20,
     marginVertical: 1, // Pequeno espaçamento entre itens
   },
-  menuItemActive: {
-    backgroundColor: '#388E3C', // Cor verde de destaque para "Películas"
-    borderRadius: 8, // Borda arredondada para o item ativo
-    marginHorizontal: 10, // Para a borda não encostar nas laterais
-  },
   menuItemIcon: {
     fontSize: 24,
     color: '#CCCCCC', // Cor padrão dos ícones
     width: 30, // Largura fixa para alinhar ícones e texto
     textAlign: 'center',
     marginRight: 15,
-  },
-  iconFilmeBackground: { // Estilo para o ícone de filme verde
-    backgroundColor: '#4CAF50', // Verde vibrante
-    width: 28, // Ajuste para tamanho do icon
-    height: 20, // Ajuste para tamanho do icon
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 4,
-    marginRight: 17, // Ajuste de margem para alinhar com outros ícones
-    overflow: 'hidden', // Garante que o conteúdo não vaze
   },
   menuItemIconFilme: { // Texto do ícone de filme
     fontSize: 16, // Tamanho menor para caber no background
