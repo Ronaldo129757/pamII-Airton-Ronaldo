@@ -255,4 +255,3 @@ const imageStyles = StyleSheet.create({
 });
 
 export default MovieScreen;
-
